@@ -1,0 +1,21 @@
+#!/bin/sh
+# Delete the ASL logs
+
+. /etc/rc.common
+
+StartService ()
+{
+	rm -f /private/var/log/asl/*.asl &
+}
+
+StopService ()
+{
+ return 0
+}
+
+RestartService ()
+{
+ return 0
+}
+
+RunService "$1"
