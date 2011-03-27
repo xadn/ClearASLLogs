@@ -1,0 +1,26 @@
+Clear ASL Logs Script
+
+This script will execute "rm -f /private/var/log/asl/*.asl &" on startup
+
+
+Rational:
+Opening the terminal on OSX can be slow if the system ASL logs have built up. This project contains an installer for Mac OS X which installs a script to delete these files on startup. This is useful since the script can be run regularly and obtain admin privileges without user intervention.
+
+
+Based on this lifehacker post: http://lifehacker.com/#!5666887/speed-up-terminal-by-clearing-asl-logs
+
+
+Description of files:
+
+- ClearASLLogs/ClearASLLogs is a bash script. It contains functions which can be called by the operating system. 
+
+- ClearASLLogs/StartupParameters.plist is an XML file required by the system for startup items.
+
+- Installer/ClearASLLogs.pmdoc is the Package Builder file with the settings to create the installer. The script and parameters must be installed to /Library/StartupItems/ClearASLLogs. In order to run, the files must be owned by root and added to the wheel group.
+
+
+
+
+
+Created by Andy Niccolai on March 27th 2011
+aniccola@mines.edu
