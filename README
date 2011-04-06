@@ -3,6 +3,10 @@ Clear ASL Logs Script
 This script will execute "rm -f /private/var/log/asl/*.asl &" on startup
 
 
+Download:
+The package installer is located in the Installer folder. It includes all of the needed files.
+
+
 Rational:
 Opening the terminal on OSX can be slow if the system ASL logs have built up. This project contains an installer for Mac OS X which installs a script to delete these files on startup. This is useful since the script can be run regularly and obtain admin privileges without user intervention.
 
